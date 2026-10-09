@@ -1,7 +1,6 @@
-
 Rails.application.routes.draw do
   get 'top/main'
   post 'top/login'
-  delete 'top/logout'
+  get 'top/logout'
   root 'top#main'
 end

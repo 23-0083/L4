@@ -266,3 +266,54 @@ Processing by TopController#main as HTML
 Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Using vips to process variants requires the libvips library. Please install libvips using the instructions on the libvips website.
+Started GET "/" for 157.13.46.105 at 2026-10-09 04:45:34 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='L4'*/[0m
+Processing by TopController#main as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/login.html.erb within layouts/application
+  Rendered top/login.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 17.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/top/login" for 157.13.46.105 at 2026-10-09 04:45:36 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by TopController#login as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "uid" => "kindai", "pass" => "sanriko", "commit" => "ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = 'kindai' AND "users"."pass" = 'sanriko' LIMIT 1 /*action='login',application='L4',controller='top'*/[0m
+  ↳ app/controllers/top_controller.rb:15:in 'TopController#login'
+Redirected to https://friendly-couscous-5vrvrq559qgjcpv4p-3000.app.github.dev/top/main
+↳ app/controllers/top_controller.rb:19:in 'TopController#login'
+Completed 302 Found in 24ms (ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/top/main" for 157.13.46.105 at 2026-10-09 04:45:36 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by TopController#main as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/main.html.erb within layouts/application
+  Rendered top/main.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/top/logout" for 157.13.46.105 at 2026-10-09 04:45:38 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by TopController#logout as HTML
+Redirected to https://friendly-couscous-5vrvrq559qgjcpv4p-3000.app.github.dev/top/main
+↳ app/controllers/top_controller.rb:27:in 'TopController#logout'
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/top/main" for 157.13.46.105 at 2026-10-09 04:45:38 +0000
+Cannot render console from 157.13.46.105! Allowed networks: 127.0.0.0/127.255.255.255, ::1, ::ffff:127.0.0.0/::ffff:127.255.255.255
+Processing by TopController#main as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering top/login.html.erb within layouts/application
+  Rendered top/login.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
