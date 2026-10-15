@@ -1,4 +1,3 @@
-
 class TopController < ApplicationController
   def main
     if session[:login_uid] != nil
@@ -12,9 +11,9 @@ class TopController < ApplicationController
     uid = params[:uid]
     pass = params[:pass]
 
-    user = User.find_by(uid: uid, pass: pass)
+    user = User.find_by(uid: uid)
 
-    if user
+    if user && user.authenticate(pass)
       session[:login_uid] = user.uid
       redirect_to top_main_path
     else
